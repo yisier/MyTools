@@ -2,6 +2,10 @@
 
 A collection of everyday developer and text utilities, available as a web app and as a native desktop app built with Wails 3 (Go + Vue 3).
 
+<p align="center">
+  <img src="public/gui.png" alt="MyTools GUI" width="60%" style="box-shadow: 0 4px 12px rgba(0,0,0,0.2); border-radius: 8px;">
+</p>
+
 ## Features
 
 **Developer tools**
