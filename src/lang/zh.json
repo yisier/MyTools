@@ -1,0 +1,249 @@
+{
+    "devTool": "开发者工具",
+    "home": "首页",
+    "search": "搜索工具",
+    "homeSubtitle": "简洁高效的在线开发者与文本工具集",
+    "json": {
+        "name": "JSON 工具",
+        "desc": "JSON格式化、校验、压缩",
+        "correct": "正确的Json",
+        "format": "格式化/校验",
+        "compress": "压缩",
+        "escape": "转义",
+        "removeEscaping": "去除转义",
+        "clearValue": "清空值"
+    },
+    "xml": {
+        "name": "XML 工具",
+        "desc": "XML 格式化、校验、压缩",
+        "correct": "正确的XML",
+        "format": "格式化/校验",
+        "compress": "压缩",
+        "clearValue": "清空值"
+    },
+    "sql": {
+        "name": "SQL 工具",
+        "desc": "SQL 格式化、校验、压缩",
+        "format": "格式化",
+        "compress": "压缩",
+        "clearValue": "清空值"
+    },
+    "base64": {
+        "name": "Base64 编码工具",
+        "desc": "Base64 编码、解码",
+        "text": "请输入文本类型字符串",
+        "base64": "请输入Base64编码字符串",
+        "encode": "Base64 编码",
+        "decode": "Base64 解码"
+    },
+    "url": {
+        "name": "URL 编码",
+        "desc": "URL encode 编码、decode 解码",
+        "urlText": "请输入 URL 字符串",
+        "urlCode": "请输入 URL 编码",
+        "encode": "URL 编码",
+        "decode": "URL 解码"
+    },
+    "linuxCron": {
+        "name": "Linux Cron 表达式生成器",
+        "desc": "Linux crontab Cron 解析，生成",
+        "placeholder": "请输入crontab 表达式",
+        "parse": "解析",
+        "next7": "最近7次执行时间",
+        "errorParse": "表达式解析有误：",
+        "example": "Linux中一般为5位命令，没有秒，最小是分钟，格式如下。",
+        "minute": "分钟<br/>取值范围<br/>0-59",
+        "hour": "小时<br/>取值范围<br/>(0-23)",
+        "day": "天<br/>取值范围<br/>(1-31)",
+        "month": "月<br/>取值范围<br/>(1-12)",
+        "week": "星期<br/>取值范围<br/>(0-7)"
+    },
+    "javaCron": {
+        "name": "Java Cron 表达式生成器",
+        "desc": "Java Quartz Cron 解析，生成",
+        "cronPlaceholder": "请输入cron执行表达式",
+        "parse": "解析",
+        "specifyPlaceholder": "可多选",
+        "day": {
+            "dayPlaceholder": "日，允许的通配符[, - * ? / L W]",
+            "unspecified": "不指定",
+            "cycleStart": "周期从",
+            "toDay": "日",
+            "averageStart": "从",
+            "executeEvery": "日执行一次",
+            "startSuffix": "号开始，每",
+            "monthlyOn": "每月",
+            "lastWorkday": "号最近的那个工作日",
+            "endOfMonth": "本月最后一天",
+            "specify": "指定",
+            "executeSuffix": "日执行一次"
+        },
+        "hour": {
+            "hourPlaceholder": "小时，允许的通配符[, - * /]",
+            "cycleStart": "周期从",
+            "toHour": "时",
+            "averageStart": "从",
+            "startSuffix": "时开始，每",
+            "executeEveryHour": "小时执行一次",
+            "specify": "指定"
+        },
+        "min": {
+            "minutePlaceholder": "分钟，允许的通配符[, - * /]",
+            "cycleStart": "周期从",
+            "toMinute": "分钟",
+            "averageStart": "从",
+            "startSuffix": "分钟开始，每",
+            "executeEveryMinute": "分钟执行一次",
+            "specify": "指定"
+        },
+        "month": {
+            "monthPlaceholder": "月，允许的通配符[, - * /]",
+            "cycleStart": "周期从",
+            "toMonth": "月",
+            "averageStart": "从",
+            "startSuffix": "月开始，每",
+            "executeEveryMonth": "月执行一次",
+            "specify": "指定"
+        },
+        "second": {
+            "secondPlaceholder": "秒，允许的通配符[, - * /]",
+            "cycleStart": "周期从",
+            "toSecond": "秒",
+            "averageStart": "从",
+            "startSuffix": "秒开始，每",
+            "executeEverySecond": "秒执行一次",
+            "specify": "指定"
+        },
+        "week": {
+            "weekPlaceholder": "周，允许的通配符[, - * ? / L #]",
+            "notSpecified": "不指定",
+            "cycleStart": "周期从",
+            "toWeek": "周",
+            "averageStart": "第",
+            "weekOfMonth": "周的",
+            "lastWeekdayOfMonth": "本月最后一个",
+            "specify": "指定",
+            "sunday": "星期日",
+            "monday": "星期一",
+            "tuesday": "星期二",
+            "wednesday": "星期三",
+            "thursday": "星期四",
+            "friday": "星期五",
+            "saturday": "星期六"
+        },
+        "year": {
+            "noInputPlaceholder": "不填，允许的通配符[, - * /]",
+            "everyYear": "每年",
+            "cycleStart": "周期从",
+            "yearRange": "年",
+            "fromYear": "从",
+            "startSuffix": " 年开始，每",
+            "executeEveryYear": "年执行一次",
+            "specifyYears": "指定"
+        },
+        "index": {
+            "second": "秒",
+            "minute": "分钟",
+            "hour": "小时",
+            "day": "日",
+            "month": "月",
+            "week": "周",
+            "year": "年",
+            "timeExpression": "时间表达式",
+            "corn": "Cron 表达式"
+        },
+        "result": {
+            "last5": "最近5次运行时间",
+            "calculating": "计算结果中..."
+        }
+    },
+    "camel": {
+        "name": "驼峰转下划线",
+        "desc": " 驼峰下划线互转",
+        "camelCaseToUnderline": "驼峰与下划线在线互转工具",
+        "camelToUnderline": "驼峰转下划线",
+        "underlineToCamel": "下划线转驼峰",
+        "clearValue": "清空值",
+        "copy": "复制",
+        "result": "转换结果",
+        "copySuccess": "复制成功"
+    },
+    "hibernate": {
+        "name": "Hibernate 转 SQL",
+        "desc": "HQL 转 SQL",
+        "title": "HQL 转 SQL 在线工具",
+        "convert": "转换",
+        "clearValue": "清空值",
+        "copy": "复制",
+        "result": "转换结果",
+        "copySuccess": "复制成功"
+    },
+    "textTool": "文本工具",
+
+    "diff": {
+        "name": "文本对比",
+        "desc": "比较两个文本之间的差异",
+        "selectOriginal": "选择原文件",
+        "selectModified": "选择新文件",
+        "original": "原文件",
+        "modified": "新文件",
+        "clear": "清空"
+    },
+    "deduplicates": {
+        "name": "文本去重",
+        "desc": " 去除文本重复行",
+        "inputPlaceholder": "请输入文本内容（每行一条）",
+        "originalLines": "原文行数",
+        "duplicateLines": "重复行数",
+        "resultLines": "最终行数",
+        "toDeduplicates": "开始去重",
+        "copy": "复制",
+        "result": "去重结果",
+        "copySuccess": "复制成功",
+        "clearValue": "清空"
+    },
+    "text": {
+        "name": "文本编辑器",
+        "desc": "在线文本编辑器",
+        "language": "语言"
+    },
+    "qrcode": {
+        "name": "二维码生成",
+        "desc": "文本/网址生成二维码",
+        "inputLabel": "输入内容",
+        "placeholder": "请输入文本或网址以生成二维码",
+        "previewTitle": "二维码预览",
+        "size": "尺寸",
+        "historyTitle": "历史记录",
+        "emptyHistory": "暂无历史记录",
+        "emptyText": "(空)",
+        "emptyInput": "请输入内容",
+        "justNow": "刚刚",
+        "minutesAgo": "分钟前",
+        "hoursAgo": "小时前",
+        "daysAgo": "天前",
+        "generate": "生成二维码",
+        "download": "下载图片",
+        "clearValue": "清空",
+        "clearAll": "清空记录",
+        "storageError": "本地存储写入失败",
+        "generateError": "二维码生成失败"
+    },
+    "nav": {
+        "home": "1024 URL",
+    "search": "搜索工具",
+        "jsonFormat": "JSON格式化校验",
+        "xmlFormat": "XML格式化校验",
+        "sqlFormat": "SQL格式化",
+        "base64": "BASE64在线解码/编码",
+        "urlEncode": "URL在线解码/编码",
+        "linuxCron": "LinuxCron 表达式解析",
+        "javaCron": "Java Quartz Cron 表达式生成器",
+        "textDiff": "在线文本差异对比",
+        "textDedup": "在线文本去重",
+        "textEditor": "在线文本编辑器",
+        "camelCase": "驼峰转下划线",
+        "hibernateToSql": "Hibernate HQL 转 SQL",
+        "qrcode": "二维码生成"
+    }
+}

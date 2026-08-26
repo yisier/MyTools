@@ -1,0 +1,33 @@
+version: '3'
+
+vars:
+  APP_NAME: "mytools"
+  BIN_DIR: "bin"
+  PACKAGE_MANAGER: '{{.PACKAGE_MANAGER | default "yarn"}}'
+  VITE_PORT: '{{.WAILS_VITE_PORT | default 9245}}'
+  GOOS: '{{.GOOS | default OS}}'
+
+includes:
+  common: ./build/Taskfile.yml
+  windows: ./build/windows/Taskfile.yml
+
+tasks:
+  build:
+    summary: 构建桌面应用
+    cmds:
+      - task: "{{.GOOS}}:build"
+
+  package:
+    summary: 打包安装程序
+    cmds:
+      - task: "{{.GOOS}}:package"
+
+  run:
+    summary: 运行桌面应用
+    cmds:
+      - task: "{{.GOOS}}:run"
+
+  dev:
+    summary: 以开发模式运行（前端热更新）
+    cmds:
+      - wails3 dev -config ./build/config.yml -port {{.VITE_PORT}}

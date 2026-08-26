@@ -1,0 +1,248 @@
+{
+    "devTool": "開発者ツール",
+    "home": "ホーム",
+    "search": "ツールを検索",
+    "homeSubtitle": "シンプルで効率的なオンライン開発者＆テキストツール集",
+    "json": {
+        "name": "JSON ツール",
+        "desc": "JSONフォーマット、検証、圧縮",
+        "correct": "正しいJSON",
+        "format": "フォーマット/検証",
+        "compress": "圧縮",
+        "escape": "エスケープ",
+        "removeEscaping": "エスケープ解除",
+        "clearValue": "値をクリア"
+    },
+    "xml": {
+        "name": "XML ツール",
+        "desc": "XML フォーマット、検証、圧縮",
+        "correct": "正しいXML",
+        "format": "フォーマット/検証",
+        "compress": "圧縮",
+        "clearValue": "値をクリア"
+    },
+    "sql": {
+        "name": "SQL ツール",
+        "desc": "SQL フォーマット、検証、圧縮",
+        "format": "フォーマット",
+        "compress": "圧縮",
+        "clearValue": "値をクリア"
+    },
+    "base64": {
+        "name": "Base64 エンコードツール",
+        "desc": "Base64 エンコード・デコード",
+        "text": "テキスト文字列を入力",
+        "base64": "Base64エンコード文字列を入力",
+        "encode": "Base64 エンコード",
+        "decode": "Base64 デコード"
+    },
+    "url": {
+        "name": "URL エンコード",
+        "desc": "URL encode エンコード・デコード",
+        "urlText": "URL文字列を入力",
+        "urlCode": "URLエンコードを入力",
+        "encode": "URLエンコード",
+        "decode": "URLデコード"
+    },
+    "linuxCron": {
+        "name": "Linux Cron式ジェネレーター",
+        "desc": "Linux crontab Cron解析・生成",
+        "placeholder": "crontab式を入力",
+        "parse": "解析",
+        "next7": "直近7回の実行時間",
+        "errorParse": "式解析エラー：",
+        "example": "Linuxでは通常5桁（秒なし）、最小単位は分。形式例：",
+        "minute": "分<br/>範囲<br/>0-59",
+        "hour": "時<br/>範囲<br/>(0-23)",
+        "day": "日<br/>範囲<br/>(1-31)",
+        "month": "月<br/>範囲<br/>(1-12)",
+        "week": "曜日<br/>範囲<br/>(0-7)"
+    },
+    "javaCron": {
+        "name": "Java Cron式ジェネレーター",
+        "desc": "Java Quartz Cron解析・生成",
+        "cronPlaceholder": "cron式を入力",
+        "parse": "解析",
+        "specifyPlaceholder": "複数選択可",
+        "day": {
+            "dayPlaceholder": "日（許可記号[, - * ? / L W]）",
+            "unspecified": "未指定",
+            "cycleStart": "周期開始",
+            "toDay": "日",
+            "averageStart": "開始日",
+            "executeEvery": "日毎に実行",
+            "startSuffix": "日から毎",
+            "monthlyOn": "毎月",
+            "lastWorkday": "日の直近営業日",
+            "endOfMonth": "月末最終日",
+            "specify": "指定",
+            "executeSuffix": "日実行"
+        },
+        "hour": {
+            "hourPlaceholder": "時（許可記号[, - * /]）",
+            "cycleStart": "周期開始",
+            "toHour": "時",
+            "averageStart": "開始時間",
+            "startSuffix": "時から毎",
+            "executeEveryHour": "時間毎に実行",
+            "specify": "指定"
+        },
+        "min": {
+            "minutePlaceholder": "分（許可記号[, - * /]）",
+            "cycleStart": "周期開始",
+            "toMinute": "分",
+            "averageStart": "開始分",
+            "startSuffix": "分から毎",
+            "executeEveryMinute": "分毎に実行",
+            "specify": "指定"
+        },
+        "month": {
+            "monthPlaceholder": "月（許可記号[, - * /]）",
+            "cycleStart": "周期開始",
+            "toMonth": "月",
+            "averageStart": "開始月",
+            "startSuffix": "月から毎",
+            "executeEveryMonth": "月毎に実行",
+            "specify": "指定"
+        },
+        "second": {
+            "secondPlaceholder": "秒（許可記号[, - * /]）",
+            "cycleStart": "周期開始",
+            "toSecond": "秒",
+            "averageStart": "開始秒",
+            "startSuffix": "秒から毎",
+            "executeEverySecond": "秒毎に実行",
+            "specify": "指定"
+        },
+        "week": {
+            "weekPlaceholder": "週（許可記号[, - * ? / L #]）",
+            "notSpecified": "未指定",
+            "cycleStart": "周期開始",
+            "toWeek": "週",
+            "averageStart": "第",
+            "weekOfMonth": "週目の",
+            "lastWeekdayOfMonth": "月最終営業日",
+            "specify": "指定",
+            "sunday": "日曜日",
+            "monday": "月曜日",
+            "tuesday": "火曜日",
+            "wednesday": "水曜日",
+            "thursday": "木曜日",
+            "friday": "金曜日",
+            "saturday": "土曜日"
+        },
+        "year": {
+            "noInputPlaceholder": "未入力（許可記号[, - * /]）",
+            "everyYear": "毎年",
+            "cycleStart": "周期開始",
+            "yearRange": "年範囲",
+            "fromYear": "開始年",
+            "startSuffix": "年から毎",
+            "executeEveryYear": "年毎に実行",
+            "specifyYears": "指定年"
+        },
+        "index": {
+            "second": "秒",
+            "minute": "分",
+            "hour": "時",
+            "day": "日",
+            "month": "月",
+            "week": "週",
+            "year": "年",
+            "timeExpression": "時間式",
+            "corn": "Cron式"
+        },
+        "result": {
+            "last5": "直近5回実行時間",
+            "calculating": "計算中..."
+        }
+    },
+    "camel": {
+        "name": "キャメルケース変換",
+        "desc": "キャメルケースとアンダースコアの相互変換",
+        "camelCaseToUnderline": "キャメルケース/アンダースコア変換ツール",
+        "camelToUnderline": "キャメル→アンダースコア",
+        "underlineToCamel": "アンダースコア→キャメル",
+        "clearValue": "クリア",
+        "copy": "コピー",
+        "result": "変換結果",
+        "copySuccess": "コピー成功"
+    },
+    "hibernate": {
+        "name": "Hibernate→SQL",
+        "desc": "HQLをSQLに変換",
+        "title": "HQL→SQL オンラインツール",
+        "convert": "変換",
+        "clearValue": "クリア",
+        "copy": "コピー",
+        "result": "変換結果",
+        "copySuccess": "コピー成功"
+    },
+    "textTool": "テキストツール",
+    "diff": {
+        "name": "テキスト差分",
+        "desc": "テキスト差異比較",
+        "selectOriginal": "元ファイルを選択",
+        "selectModified": "新ファイルを選択",
+        "original": "元ファイル",
+        "modified": "新ファイル",
+        "clear": "クリア"
+    },
+    "deduplicates": {
+        "name": "テキスト重複除去",
+        "desc": "重複行の削除",
+        "inputPlaceholder": "テキスト入力（1行1項目）",
+        "originalLines": "原文行数",
+        "duplicateLines": "重複行数",
+        "resultLines": "結果行数",
+        "toDeduplicates": "重複除去開始",
+        "copy": "コピー",
+        "result": "除去結果",
+        "copySuccess": "コピー成功",
+        "clearValue": "クリア"
+    },
+    "text": {
+        "name": "テキストエディタ",
+        "desc": "オンラインテキストエディタ",
+        "language": "言語"
+    },
+    "qrcode": {
+        "name": "QRコード生成",
+        "desc": "テキスト/URLからQRコードを生成",
+        "inputLabel": "内容入力",
+        "placeholder": "テキストまたはURLを入力してQRコードを生成",
+        "previewTitle": "プレビュー",
+        "size": "サイズ",
+        "historyTitle": "履歴",
+        "emptyHistory": "履歴なし",
+        "emptyText": "(空)",
+        "emptyInput": "内容を入力してください",
+        "justNow": "今",
+        "minutesAgo": "分前",
+        "hoursAgo": "時間前",
+        "daysAgo": "日前",
+        "generate": "QRコードを生成",
+        "download": "ダウンロード",
+        "clearValue": "クリア",
+        "clearAll": "全削除",
+        "storageError": "ローカルストレージへの書き込みに失敗しました",
+        "generateError": "QRコードの生成に失敗しました"
+    },
+    "nav": {
+        "home": "1024 URL",
+    "search": "ツールを検索",
+        "jsonFormat": "JSONフォーマット検証",
+        "xmlFormat": "XMLフォーマット検証",
+        "sqlFormat": "SQLフォーマット",
+        "base64": "BASE64オンラインエンコード/デコード",
+        "urlEncode": "URLオンラインエンコード/デコード",
+        "linuxCron": "LinuxCron式解析",
+        "javaCron": "Java Quartz Cron式ジェネレーター",
+        "textDiff": "オンラインテキスト差分比較",
+        "textDedup": "オンラインテキスト重複除去",
+        "textEditor": "オンラインテキストエディタ",
+        "camelCase": "キャメルケース変換",
+        "hibernateToSql": "Hibernate HQL→SQL",
+        "qrcode": "QRコード生成"
+    }
+}

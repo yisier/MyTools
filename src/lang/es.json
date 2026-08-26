@@ -1,0 +1,248 @@
+{
+    "devTool": "Herramienta de desarrollador",
+    "home": "Inicio",
+  "search": "Buscar herramientas",
+    "homeSubtitle": "Un conjunto limpio de utilidades online para desarrolladores y texto",
+    "json": {
+        "name": "Herramienta JSON",
+        "desc": "Formateo, validación y compresión de JSON",
+        "correct": "JSON correcto",
+        "format": "Formatear/Validar",
+        "compress": "Comprimir",
+        "escape": "Escapar",
+        "removeEscaping": "Quitar escape",
+        "clearValue": "Borrar valor"
+    },
+    "xml": {
+        "name": "Herramienta XML",
+        "desc": "Formateo, validación y compresión de XML",
+        "correct": "XML correcto",
+        "format": "Formatear/Validar",
+        "compress": "Comprimir",
+        "clearValue": "Borrar valor"
+    },
+    "sql": {
+        "name": "Herramienta SQL",
+        "desc": "Formateo, validación y compresión de SQL",
+        "format": "Formatear",
+        "compress": "Comprimir",
+        "clearValue": "Borrar valor"
+    },
+    "base64": {
+        "name": "Herramienta de codificación Base64",
+        "desc": "Codificación y decodificación Base64",
+        "text": "Ingrese una cadena de texto",
+        "base64": "Ingrese una cadena codificada en Base64",
+        "encode": "Codificar en Base64",
+        "decode": "Decodificar Base64"
+    },
+    "url": {
+        "name": "Codificación URL",
+        "desc": "Codificación URL encode y decodificación decode",
+        "urlText": "Ingrese una cadena de URL",
+        "urlCode": "Ingrese la codificación URL",
+        "encode": "Codificar URL",
+        "decode": "Decodificar URL"
+    },
+    "linuxCron": {
+        "name": "Generador de expresiones Linux Cron",
+        "desc": "Análisis y generación de expresiones Cron de crontab en Linux",
+        "placeholder": "Ingrese la expresión de crontab",
+        "parse": "Analizar",
+        "next7": "Las próximas 7 fechas de ejecución",
+        "errorParse": "Error en el análisis de la expresión:",
+        "example": "En Linux, generalmente es un comando de 5 dígitos, sin segundos, y el mínimo es el minuto. El formato es el siguiente.",
+        "minute": "Minuto<br>Rango de valores<br>0 - 59",
+        "hour": "Hora<br>Rango de valores<br>(0 - 23)",
+        "day": "Día<br>Rango de valores<br>(1 - 31)",
+        "month": "Mes<br>Rango de valores<br>(1 - 12)",
+        "week": "Semana<br>Rango de valores<br>(0 - 7)"
+    },
+    "javaCron": {
+        "name": "Generador de expresiones Java Cron",
+        "desc": "Análisis y generación de expresiones Cron de Quartz en Java",
+        "cronPlaceholder": "Ingrese la expresión de ejecución cron",
+        "parse": "Analizar",
+        "specifyPlaceholder": "Puede seleccionar múltiples opciones",
+        "day": {
+            "dayPlaceholder": "Día, comodines permitidos [, - *? / L W]",
+            "unspecified": "No especificado",
+            "cycleStart": "El ciclo comienza en",
+            "toDay": "día",
+            "averageStart": "A partir de",
+            "executeEvery": "ejecutar una vez al día",
+            "startSuffix": "del día comenzando, cada",
+            "monthlyOn": "Cada mes",
+            "lastWorkday": "el último día hábil más cercano al día",
+            "endOfMonth": "el último día del mes",
+            "specify": "Especificar",
+            "executeSuffix": "ejecutar una vez cada día"
+        },
+        "hour": {
+            "hourPlaceholder": "Hora, comodines permitidos [, - * /]",
+            "cycleStart": "El ciclo comienza en",
+            "toHour": "hora",
+            "averageStart": "A partir de",
+            "startSuffix": "de la hora comenzando, cada",
+            "executeEveryHour": "ejecutar una vez cada hora",
+            "specify": "Especificar"
+        },
+        "min": {
+            "minutePlaceholder": "Minuto, comodines permitidos [, - * /]",
+            "cycleStart": "El ciclo comienza en",
+            "toMinute": "minuto",
+            "averageStart": "A partir de",
+            "startSuffix": "del minuto comenzando, cada",
+            "executeEveryMinute": "ejecutar una vez cada minuto",
+            "specify": "Especificar"
+        },
+        "month": {
+            "monthPlaceholder": "Mes, comodines permitidos [, - * /]",
+            "cycleStart": "El ciclo comienza en",
+            "toMonth": "mes",
+            "averageStart": "A partir de",
+            "startSuffix": "del mes comenzando, cada",
+            "executeEveryMonth": "ejecutar una vez cada mes",
+            "specify": "Especificar"
+        },
+        "second": {
+            "secondPlaceholder": "Segundo, comodines permitidos [, - * /]",
+            "cycleStart": "El ciclo comienza en",
+            "toSecond": "segundo",
+            "averageStart": "A partir de",
+            "startSuffix": "del segundo comenzando, cada",
+            "executeEverySecond": "ejecutar una vez cada segundo",
+            "specify": "Especificar"
+        },
+        "week": {
+            "weekPlaceholder": "Semana, comodines permitidos [, - *? / L #]",
+            "notSpecified": "No especificado",
+            "cycleStart": "El ciclo comienza en",
+            "toWeek": "semana",
+            "averageStart": "La",
+            "weekOfMonth": "semana del",
+            "lastWeekdayOfMonth": "último día de la semana del mes",
+            "specify": "Especificar",
+            "sunday": "Domingo",
+            "monday": "Lunes",
+            "tuesday": "Martes",
+            "wednesday": "Miércoles",
+            "thursday": "Jueves",
+            "friday": "Viernes",
+            "saturday": "Sábado"
+        },
+        "year": {
+            "noInputPlaceholder": "Dejar en blanco, comodines permitidos [, - * /]",
+            "everyYear": "Cada año",
+            "cycleStart": "El ciclo comienza en",
+            "yearRange": "año",
+            "fromYear": "A partir de",
+            "startSuffix": " del año comenzando, cada",
+            "executeEveryYear": "ejecutar una vez cada año",
+            "specifyYears": "Especificar años"
+        },
+        "index": {
+            "second": "Segundo",
+            "minute": "Minuto",
+            "hour": "Hora",
+            "day": "Día",
+            "month": "Mes",
+            "week": "Semana",
+            "year": "Año",
+            "timeExpression": "Expresión de tiempo",
+            "corn": "Expresión Cron"
+        },
+        "result": {
+            "last5": "Las últimas 5 fechas de ejecución",
+            "calculating": "Calculando resultados..."
+        }
+    },
+    "camel": {
+        "name": "CamelCase a guión bajo",
+        "desc": "Conversión entre CamelCase y guión bajo",
+        "camelCaseToUnderline": "Herramienta en línea de conversión entre CamelCase y guión bajo",
+        "camelToUnderline": "CamelCase a guión bajo",
+        "underlineToCamel": "Guión bajo a CamelCase",
+        "clearValue": "Borrar valor",
+        "copy": "Copiar",
+        "result": "Resultado de la conversión",
+        "copySuccess": "Copiado con éxito"
+    },
+    "hibernate": {
+        "name": "Hibernate a SQL",
+        "desc": "Convertir registro de Hibernate a SQL ejecutable",
+        "title": "Registro de Hibernate a SQL (parámetros enlazados)",
+        "convert": "Convertir",
+        "clearValue": "Borrar valor",
+        "copy": "Copiar",
+        "result": "Resultado de la conversión",
+        "copySuccess": "Copiado con éxito"
+    },
+    "textTool": "Herramienta de texto",
+    "diff": {
+        "name": "Comparación de textos",
+        "desc": "Comparar las diferencias entre dos textos",
+        "selectOriginal": "Seleccionar archivo original",
+        "selectModified": "Seleccionar archivo nuevo",
+        "original": "Archivo original",
+        "modified": "Archivo nuevo",
+        "clear": "Limpiar"
+    },
+    "deduplicates": {
+        "name": "Eliminación de duplicados de texto",
+        "desc": "Eliminar líneas duplicadas de texto",
+        "inputPlaceholder": "Ingrese el contenido de texto (una línea por cada entrada)",
+        "originalLines": "Número de líneas originales",
+        "duplicateLines": "Número de líneas duplicadas",
+        "resultLines": "Número de líneas finales",
+        "toDeduplicates": "Comenzar a eliminar duplicados",
+        "copy": "Copiar",
+        "result": "Resultado de la eliminación de duplicados",
+        "copySuccess": "Copiado con éxito",
+        "clearValue": "Borrar"
+    },
+    "text": {
+        "name": "Editor de texto",
+        "desc": "Editor de texto en línea",
+        "language": "Idioma"
+    },
+    "qrcode": {
+        "name": "Generador de códigos QR",
+        "desc": "Genera códigos QR desde texto o URL",
+        "inputLabel": "Contenido",
+        "placeholder": "Ingresa texto o URL para generar un código QR",
+        "previewTitle": "Vista previa",
+        "size": "Tamaño",
+        "historyTitle": "Historial",
+        "emptyHistory": "Sin historial",
+        "emptyText": "(vacío)",
+        "emptyInput": "Ingresa algún contenido",
+        "justNow": "ahora",
+        "minutesAgo": "min",
+        "hoursAgo": "h",
+        "daysAgo": "d",
+        "generate": "Generar código QR",
+        "download": "Descargar",
+        "clearValue": "Borrar",
+        "clearAll": "Borrar todo",
+        "storageError": "Error al escribir en el almacenamiento local",
+        "generateError": "Error al generar el código QR"
+    },
+    "nav": {
+        "home": "1024 URL",
+  "search": "Buscar herramientas",
+        "jsonFormat": "Validación y formateo de JSON",
+        "xmlFormat": "Validación y formateo de XML",
+        "sqlFormat": "Formateo de SQL",
+        "base64": "Decodificación/Codificación en línea de BASE64",
+        "urlEncode": "Decodificación/Codificación en línea de URL",
+        "linuxCron": "Análisis de expresiones Linux Cron",
+        "javaCron": "Generador de expresiones Java Quartz Cron",
+        "textDiff": "Comparación de diferencias de texto en línea",
+        "textDedup": "Eliminación de duplicados de texto en línea",
+        "textEditor": "Editor de texto en línea",
+        "camelCase": "CamelCase a guión bajo",
+        "hibernateToSql": "Registro de Hibernate a SQL",
+        "qrcode": "Generador de códigos QR"
+    }
+}

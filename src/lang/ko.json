@@ -1,0 +1,248 @@
+{
+    "devTool": "개발자 도구",
+    "home": "홈",
+    "search": "도구 검색",
+    "homeSubtitle": "깔끔한 온라인 개발자 & 텍스트 도구 모음",
+    "json": {
+        "name": "JSON 도구",
+        "desc": "JSON 형식 지정, 검증, 압축",
+        "correct": "올바른 Json",
+        "format": "형식 지정/검증",
+        "compress": "압축",
+        "escape": "이스케이프",
+        "removeEscaping": "이스케이프 제거",
+        "clearValue": "값 지우기"
+    },
+    "xml": {
+        "name": "XML 도구",
+        "desc": "XML 형식 지정, 검증, 압축",
+        "correct": "올바른 XML",
+        "format": "형식 지정/검증",
+        "compress": "압축",
+        "clearValue": "값 지우기"
+    },
+    "sql": {
+        "name": "SQL 도구",
+        "desc": "SQL 형식 지정, 검증, 압축",
+        "format": "형식 지정",
+        "compress": "압축",
+        "clearValue": "값 지우기"
+    },
+    "base64": {
+        "name": "Base64 인코딩 도구",
+        "desc": "Base64 인코딩, 디코딩",
+        "text": "텍스트 유형 문자열을 입력하세요.",
+        "base64": "Base64 인코딩 문자열을 입력하세요.",
+        "encode": "Base64 인코딩",
+        "decode": "Base64 디코딩"
+    },
+    "url": {
+        "name": "URL 인코딩",
+        "desc": "URL encode 인코딩, decode 디코딩",
+        "urlText": "URL 문자열을 입력하세요.",
+        "urlCode": "URL 인코딩을 입력하세요.",
+        "encode": "URL 인코딩",
+        "decode": "URL 디코딩"
+    },
+    "linuxCron": {
+        "name": "Linux Cron 표현식 생성기",
+        "desc": "Linux crontab Cron 파싱, 생성",
+        "placeholder": "crontab 표현식을 입력하세요.",
+        "parse": "파싱",
+        "next7": "가장 최근 7번 실행 시간",
+        "errorParse": "표현식 파싱 오류:",
+        "example": "Linux에서 일반적으로 5자리 명령어이며, 초는 없고 최소 단위는 분입니다. 형식은 다음과 같습니다.",
+        "minute": "분<br/>허용 범위<br/>0-59",
+        "hour": "시<br/>허용 범위<br/>(0-23)",
+        "day": "일<br/>허용 범위<br/>(1-31)",
+        "month": "월<br/>허용 범위<br/>(1-12)",
+        "week": "주<br/>허용 범위<br/>(0-7)"
+    },
+    "javaCron": {
+        "name": "Java Cron 표현식 생성기",
+        "desc": "Java Quartz Cron 파싱, 생성",
+        "cronPlaceholder": "cron 실행 표현식을 입력하세요.",
+        "parse": "파싱",
+        "specifyPlaceholder": "다중 선택 가능",
+        "day": {
+            "dayPlaceholder": "일, 허용 와일드카드 [, - *? / L W]",
+            "unspecified": "지정하지 않음",
+            "cycleStart": "주기 시작",
+            "toDay": "일",
+            "averageStart": "시작",
+            "executeEvery": "일마다 한 번 실행",
+            "startSuffix": "일부터 시작하여 매",
+            "monthlyOn": "매월",
+            "lastWorkday": "일에 가장 가까운 평일",
+            "endOfMonth": "이번 달의 마지막 날",
+            "specify": "지정",
+            "executeSuffix": "일마다 한 번 실행"
+        },
+        "hour": {
+            "hourPlaceholder": "시, 허용 와일드카드 [, - * /]",
+            "cycleStart": "주기 시작",
+            "toHour": "시",
+            "averageStart": "시작",
+            "startSuffix": "시부터 시작하여 매",
+            "executeEveryHour": "시간마다 한 번 실행",
+            "specify": "지정"
+        },
+        "min": {
+            "minutePlaceholder": "분, 허용 와일드카드 [, - * /]",
+            "cycleStart": "주기 시작",
+            "toMinute": "분",
+            "averageStart": "시작",
+            "startSuffix": "분부터 시작하여 매",
+            "executeEveryMinute": "분마다 한 번 실행",
+            "specify": "지정"
+        },
+        "month": {
+            "monthPlaceholder": "월, 허용 와일드카드 [, - * /]",
+            "cycleStart": "주기 시작",
+            "toMonth": "월",
+            "averageStart": "시작",
+            "startSuffix": "월부터 시작하여 매",
+            "executeEveryMonth": "월마다 한 번 실행",
+            "specify": "지정"
+        },
+        "second": {
+            "secondPlaceholder": "초, 허용 와일드카드 [, - * /]",
+            "cycleStart": "주기 시작",
+            "toSecond": "초",
+            "averageStart": "시작",
+            "startSuffix": "초부터 시작하여 매",
+            "executeEverySecond": "초마다 한 번 실행",
+            "specify": "지정"
+        },
+        "week": {
+            "weekPlaceholder": "주, 허용 와일드카드 [, - *? / L #]",
+            "notSpecified": "지정하지 않음",
+            "cycleStart": "주기 시작",
+            "toWeek": "주",
+            "averageStart": "제",
+            "weekOfMonth": "주의",
+            "lastWeekdayOfMonth": "이번 달의 마지막",
+            "specify": "지정",
+            "sunday": "일요일",
+            "monday": "월요일",
+            "tuesday": "화요일",
+            "wednesday": "수요일",
+            "thursday": "목요일",
+            "friday": "금요일",
+            "saturday": "토요일"
+        },
+        "year": {
+            "noInputPlaceholder": "입력하지 않음, 허용 와일드카드 [, - * /]",
+            "everyYear": "매년",
+            "cycleStart": "주기 시작",
+            "yearRange": "년",
+            "fromYear": "시작",
+            "startSuffix": "년부터 시작하여 매",
+            "executeEveryYear": "년마다 한 번 실행",
+            "specifyYears": "지정"
+        },
+        "index": {
+            "second": "초",
+            "minute": "분",
+            "hour": "시",
+            "day": "일",
+            "month": "월",
+            "week": "주",
+            "year": "년",
+            "timeExpression": "시간 표현식",
+            "corn": "Cron 표현식"
+        },
+        "result": {
+            "last5": "가장 최근 5번 실행 시간",
+            "calculating": "계산 결과 중..."
+        }
+    },
+    "camel": {
+        "name": "카멜케이스에서 언더스코어로 변환",
+        "desc": "카멜케이스와 언더스코어 상호 변환",
+        "camelCaseToUnderline": "카멜케이스와 언더스코어 온라인 상호 변환 도구",
+        "camelToUnderline": "카멜케이스에서 언더스코어로 변환",
+        "underlineToCamel": "언더스코어에서 카멜케이스로 변환",
+        "clearValue": "값 지우기",
+        "copy": "복사",
+        "result": "변환 결과",
+        "copySuccess": "복사 성공"
+    },
+    "hibernate": {
+        "name": "Hibernate → SQL",
+        "desc": "HQL을 SQL로 변환",
+        "title": "HQL → SQL 온라인 도구",
+        "convert": "변환",
+        "clearValue": "값 지우기",
+        "copy": "복사",
+        "result": "변환 결과",
+        "copySuccess": "복사 성공"
+    },
+    "textTool": "텍스트 도구",
+    "diff": {
+        "name": "텍스트 비교",
+        "desc": "두 텍스트 간의 차이를 비교합니다.",
+        "selectOriginal": "원본 파일 선택",
+        "selectModified": "새 파일 선택",
+        "original": "원본 파일",
+        "modified": "새 파일",
+        "clear": "지우기"
+    },
+    "deduplicates": {
+        "name": "텍스트 중복 제거",
+        "desc": "텍스트 중복 행 제거",
+        "inputPlaceholder": "텍스트 내용을 입력하세요(한 줄에 하나씩).",
+        "originalLines": "원본 행 수",
+        "duplicateLines": "중복 행 수",
+        "resultLines": "최종 행 수",
+        "toDeduplicates": "중복 제거 시작",
+        "copy": "복사",
+        "result": "중복 제거 결과",
+        "copySuccess": "복사 성공",
+        "clearValue": "지우기"
+    },
+    "text": {
+        "name": "텍스트 편집기",
+        "desc": "온라인 텍스트 편집기",
+        "language": "언어"
+    },
+    "qrcode": {
+        "name": "QR 코드 생성기",
+        "desc": "텍스트/URL로 QR 코드 생성",
+        "inputLabel": "내용 입력",
+        "placeholder": "텍스트 또는 URL을 입력하여 QR 코드 생성",
+        "previewTitle": "미리보기",
+        "size": "크기",
+        "historyTitle": "기록",
+        "emptyHistory": "기록 없음",
+        "emptyText": "(비어 있음)",
+        "emptyInput": "내용을 입력하세요",
+        "justNow": "방금",
+        "minutesAgo": "분 전",
+        "hoursAgo": "시간 전",
+        "daysAgo": "일 전",
+        "generate": "QR 코드 생성",
+        "download": "다운로드",
+        "clearValue": "지우기",
+        "clearAll": "전체 삭제",
+        "storageError": "로컬 저장소 쓰기 실패",
+        "generateError": "QR 코드 생성 실패"
+    },
+    "nav": {
+        "home": "1024 URL",
+    "search": "도구 검색",
+        "jsonFormat": "JSON 형식 지정 및 검증",
+        "xmlFormat": "XML 형식 지정 및 검증",
+        "sqlFormat": "SQL 형식 지정",
+        "base64": "BASE64 온라인 디코딩/인코딩",
+        "urlEncode": "URL 온라인 디코딩/인코딩",
+        "linuxCron": "LinuxCron 표현식 파싱",
+        "javaCron": "Java Quartz Cron 표현식 생성기",
+        "textDiff": "온라인 텍스트 차이 비교",
+        "textDedup": "온라인 텍스트 중복 제거",
+        "textEditor": "온라인 텍스트 편집기",
+        "camelCase": "카멜케이스에서 언더스코어로 변환",
+        "hibernateToSql": "Hibernate 로그 → SQL",
+        "qrcode": "QR 코드 생성기"
+    }
+}

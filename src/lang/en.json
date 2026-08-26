@@ -1,0 +1,248 @@
+{
+  "devTool": "Developer Tools",
+  "home": "Home",
+  "search": "Search tools",
+  "homeSubtitle": "A clean set of online developer & text utilities",
+  "json": {
+    "name": "JSON Tools",
+    "desc": "JSON Formatting, Validation, Compression",
+    "correct": "Correct JSON",
+    "format": "Format/Validate",
+    "compress": "Compress",
+    "escape": "Escape",
+    "removeEscaping": "Remove Escaping",
+    "clearValue": "Clear Value"
+  },
+  "xml": {
+    "name": "XML Tools",
+    "desc": "XML Formatting, Validation, Compression",
+    "correct": "Correct XML",
+    "format": "Format/Validate",
+    "compress": "Compress",
+    "clearValue": "Clear Value"
+  },
+  "sql": {
+    "name": "SQL Tools",
+    "desc": "SQL Formatting, Validation, Compression",
+    "format": "Format",
+    "compress": "Compress",
+    "clearValue": "Clear Value"
+  },
+  "base64": {
+    "name": "Base64 Encoding Tools",
+    "desc": "Base64 Encoding, Decoding",
+    "text": "Please enter a text-type string",
+    "base64": "Please enter a Base64-encoded string",
+    "encode": "Base64 Encode",
+    "decode": "Base64 Decode"
+  },
+  "url": {
+    "name": "URL Encoding",
+    "desc": "URL Encoding, Decoding",
+    "urlText": "Please enter a URL string",
+    "urlCode": "Please enter a URL encoding",
+    "encode": "URL Encode",
+    "decode": "URL Decode"
+  },
+  "linuxCron": {
+    "name": "Linux Cron Expression Generator",
+    "desc": "Linux crontab Cron Parsing, Generation",
+    "placeholder": "Please enter the crontab expression",
+    "parse": "Parse",
+    "next7": "Next 7 Execution Times",
+    "errorParse": "Expression parsing error: ",
+    "example": "In Linux, it is usually a 5 - bit command. There is no second, and the minimum unit is minute. The format is as follows.",
+    "minute": "Minute<br/>Value Range<br/>0 - 59",
+    "hour": "Hour<br/>Value Range<br/>(0 - 23)",
+    "day": "Day<br/>Value Range<br/>(1 - 31)",
+    "month": "Month<br/>Value Range<br/>(1 - 12)",
+    "week": "Week<br/>Value Range<br/>(0 - 7)"
+  },
+  "javaCron": {
+    "name": "Java Cron Expression Generator",
+    "desc": "Java Quartz Cron Parsing, Generation",
+    "specifyPlaceholder": "Can be selected multiple times",
+    "cronPlaceholder": "Please enter the cron execution expression",
+    "parse": "Parse",
+    "day": {
+      "dayPlaceholder": "Day, Allowed Wildcards [, - *? / L W]",
+      "unspecified": "Unspecified",
+      "cycleStart": "Cycle starts from",
+      "toDay": "day",
+      "averageStart": "From",
+      "executeEvery": "Execute once every",
+      "startSuffix": "starts from the day, every",
+      "monthlyOn": "On the",
+      "lastWorkday": "day, the nearest working day",
+      "endOfMonth": "The last day of this month",
+      "specify": "Specify",
+      "executeSuffix": "day to execute once"
+    },
+    "hour": {
+      "hourPlaceholder": "Hour, Allowed Wildcards [, - * /]",
+      "cycleStart": "Cycle starts from",
+      "toHour": "o'clock",
+      "averageStart": "From",
+      "startSuffix": "o'clock starts, every",
+      "executeEveryHour": "Execute once every hour",
+      "specify": "Specify"
+    },
+    "min": {
+      "minutePlaceholder": "Minute, Allowed Wildcards [, - * /]",
+      "cycleStart": "Cycle starts from",
+      "toMinute": "minutes",
+      "averageStart": "From",
+      "startSuffix": "minutes start, every",
+      "executeEveryMinute": "Execute once every minute",
+      "specify": "Specify"
+    },
+    "month": {
+      "monthPlaceholder": "Month, Allowed Wildcards [, - * /]",
+      "cycleStart": "Cycle starts from",
+      "toMonth": "month",
+      "averageStart": "From",
+      "startSuffix": "month starts, every",
+      "executeEveryMonth": "Execute once every month",
+      "specify": "Specify"
+    },
+    "second": {
+      "secondPlaceholder": "Second, Allowed Wildcards [, - * /]",
+      "cycleStart": "Cycle starts from",
+      "toSecond": "seconds",
+      "averageStart": "From",
+      "startSuffix": "seconds start, every",
+      "executeEverySecond": "Execute once every second",
+      "specify": "Specify"
+    },
+    "week": {
+      "weekPlaceholder": "Week, Allowed Wildcards [, - *? / L #]",
+      "notSpecified": "Not specified",
+      "cycleStart": "Cycle starts from",
+      "toWeek": "week",
+      "averageStart": "The",
+      "weekOfMonth": "week of the",
+      "lastWeekdayOfMonth": "last",
+      "specify": "Specify",
+      "sunday": "Sunday",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday"
+    },
+    "year": {
+      "noInputPlaceholder": "Leave blank, Allowed Wildcards [, - * /]",
+      "everyYear": "Every year",
+      "cycleStart": "Cycle starts from",
+      "yearRange": "year",
+      "fromYear": "From",
+      "startSuffix": " year starts, every",
+      "executeEveryYear": "Execute once every year",
+      "specifyYears": "Specify"
+    },
+    "index": {
+      "second": "Second",
+      "minute": "Minute",
+      "hour": "Hour",
+      "day": "Day",
+      "month": "Month",
+      "week": "Week",
+      "year": "Year",
+      "timeExpression": "Time Expression",
+      "corn": "Cron Expression"
+    },
+    "result": {
+      "last5": "Last 5 Execution Times",
+      "calculating": "Calculating results..."
+    }
+  },
+  "camel": {
+    "name": "Camel Case to Underscore",
+    "desc": "Camel Case and Underscore Conversion",
+    "camelCaseToUnderline": "Camel Case and Underscore Online Conversion Tool",
+    "camelToUnderline": "Camel Case to Underscore",
+    "underlineToCamel": "Underscore to Camel Case",
+    "clearValue": "Clear Value",
+    "copy": "Copy",
+    "result": "Conversion Result",
+    "copySuccess": "Copy Success"
+  },
+  "hibernate": {
+    "name": "Hibernate to SQL",
+    "desc": "Convert HQL to SQL",
+    "title": "HQL to SQL Online Tool",
+    "convert": "Convert",
+    "clearValue": "Clear Value",
+    "copy": "Copy",
+    "result": "Conversion Result",
+    "copySuccess": "Copy Success"
+  },
+  "textTool": "Text Tools",
+  "diff": {
+    "name": "Text Comparison",
+    "desc": "Compare the differences between two texts",
+    "selectOriginal": "Select Original File",
+    "selectModified": "Select Modified File",
+    "original": "Original",
+    "modified": "Modified",
+    "clear": "Clear"
+  },
+  "deduplicates": {
+    "name": "Text Duplicate Removal",
+    "desc": "Remove duplicate lines in text",
+    "inputPlaceholder": "Please enter the text content (one line per line)",
+    "originalLines": "Original Lines",
+    "duplicateLines": "Duplicate Lines",
+    "resultLines": "Result Lines",
+    "toDeduplicates": "Start Deduplication",
+    "copy": "Copy",
+    "result": "Deduplication Result",
+    "copySuccess": "Copy Success",
+    "clearValue": "Clear"
+  },
+  "text": {
+    "name": "Text Editor",
+    "desc": "Online text editor",
+    "language": "language"
+  },
+  "qrcode": {
+    "name": "QR Code Generator",
+    "desc": "Generate QR codes from text or URL",
+    "inputLabel": "Content",
+    "placeholder": "Enter text or URL to generate a QR code",
+    "previewTitle": "Preview",
+    "size": "Size",
+    "historyTitle": "History",
+    "emptyHistory": "No history yet",
+    "emptyText": "(empty)",
+    "emptyInput": "Please enter some content",
+    "justNow": "just now",
+    "minutesAgo": "m ago",
+    "hoursAgo": "h ago",
+    "daysAgo": "d ago",
+    "generate": "Generate QR Code",
+    "download": "Download",
+    "clearValue": "Clear",
+    "clearAll": "Clear all",
+    "storageError": "Failed to write to local storage",
+    "generateError": "Failed to generate QR code"
+  },
+  "nav": {
+    "home": "1024 URL",
+  "search": "Search tools",
+    "jsonFormat": "JSON Format & Validate",
+    "xmlFormat": "XML Format & Validate",
+    "sqlFormat": "SQL Formatter",
+    "base64": "BASE64 Encode/Decode",
+    "urlEncode": "URL Encode/Decode",
+    "linuxCron": "Linux Cron Expression Parser",
+    "javaCron": "Java Quartz Cron Generator",
+    "textDiff": "Online Text Diff",
+    "textDedup": "Online Text Deduplication",
+    "textEditor": "Online Text Editor",
+    "camelCase": "CamelCase to Underscore",
+    "hibernateToSql": "Hibernate HQL to SQL",
+    "qrcode": "QR Code Generator"
+  }
+}

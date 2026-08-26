@@ -1,0 +1,38 @@
+version: '3'
+
+info:
+  companyName: "yisier"
+  productName: "MyTools"
+  productIdentifier: "com.yisier.mytools"
+  description: "开发者工具箱"
+  copyright: "(c) 2026, yisier"
+  comments: "常用开发工具集合"
+  version: "0.1.0"
+
+dev_mode:
+  root_path: .
+  log_level: warn
+  debounce: 1000
+  ignore:
+    dir:
+      - .git
+      - node_modules
+      - dist
+      - bin
+      - src
+      - public
+    file:
+      - .DS_Store
+      - .gitignore
+      - .gitkeep
+      - "*_test.go"
+    watched_extension:
+      - "*.go"
+    git_ignore: true
+  executes:
+    - cmd: wails3 build DEV=true
+      type: blocking
+    - cmd: wails3 task common:dev:frontend
+      type: background
+    - cmd: wails3 task run
+      type: primary

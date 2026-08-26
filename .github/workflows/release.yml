@@ -1,0 +1,121 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ matrix.name }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: windows-amd64
+            runner: windows-latest
+            goos: windows
+            goarch: amd64
+            ext: .exe
+          - name: windows-386
+            runner: windows-latest
+            goos: windows
+            goarch: '386'
+            ext: .exe
+          - name: windows-arm64
+            runner: windows-latest
+            goos: windows
+            goarch: arm64
+            ext: .exe
+          - name: linux-amd64
+            runner: ubuntu-24.04
+            goos: linux
+            goarch: amd64
+            ext: ''
+          - name: linux-arm64
+            runner: ubuntu-24.04-arm
+            goos: linux
+            goarch: arm64
+            ext: ''
+          - name: macos-arm64
+            runner: macos-latest
+            goos: darwin
+            goarch: arm64
+            ext: ''
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install frontend dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build frontend
+        run: yarn build
+
+      - name: Install Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pkg-config libgtk-3-dev libwebkit2gtk-4.1-dev
+
+      - name: Install wails3 CLI
+        run: go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-beta.12
+
+      # 生成带图标和版本信息的 .syso，go build 时自动链接
+      - name: Generate Windows syso
+        if: runner.os == 'Windows'
+        working-directory: build
+        continue-on-error: true
+        shell: bash
+        run: |
+          wails3 generate syso -arch ${{ matrix.goarch }} \
+            -icon windows/icon.ico \
+            -manifest windows/wails.exe.manifest \
+            -info windows/info.json \
+            -out ../wails_windows_${{ matrix.goarch }}.syso
+
+      - name: Build binary
+        shell: bash
+        env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+          CGO_ENABLED: ${{ runner.os == 'Windows' && '0' || '1' }}
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            LDFLAGS="-w -s -H windowsgui"
+          else
+            LDFLAGS="-w -s"
+          fi
+          go build -tags production -trimpath -buildvcs=false -ldflags "$LDFLAGS" -o "mytools${{ matrix.ext }}" .
+
+      - name: Package
+        shell: bash
+        run: |
+          VERSION="${GITHUB_REF_NAME}"
+          ARTIFACT="MyTools-${VERSION}-${{ matrix.goos }}-${{ matrix.goarch }}"
+          mkdir -p release
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            7z a "release/${ARTIFACT}.zip" "mytools${{ matrix.ext }}"
+          else
+            zip -j "release/${ARTIFACT}.zip" "mytools${{ matrix.ext }}"
+          fi
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*.zip

@@ -1,0 +1,248 @@
+{
+    "devTool": "Công cụ phát triển",
+    "home": "Trang chủ",
+    "search": "Tìm kiếm công cụ",
+    "homeSubtitle": "Bộ công cụ văn bản & dành cho lập trình viên gọn gàng, hiệu quả",
+    "json": {
+        "name": "Công cụ JSON",
+        "desc": "Định dạng, kiểm tra, nén JSON",
+        "correct": "JSON đúng",
+        "format": "Định dạng/kiểm tra",
+        "compress": "Nén",
+        "escape": "Chuyển dấu",
+        "removeEscaping": "Bỏ chuyển dấu",
+        "clearValue": "Xóa giá trị"
+    },
+    "xml": {
+        "name": "Công cụ XML",
+        "desc": "Định dạng, kiểm tra, nén XML",
+        "correct": "XML đúng",
+        "format": "Định dạng/kiểm tra",
+        "compress": "Nén",
+        "clearValue": "Xóa giá trị"
+    },
+    "sql": {
+        "name": "Công cụ SQL",
+        "desc": "Định dạng, kiểm tra, nén SQL",
+        "format": "Định dạng",
+        "compress": "Nén",
+        "clearValue": "Xóa giá trị"
+    },
+    "base64": {
+        "name": "Công cụ mã hóa Base64",
+        "desc": "Mã hóa, giải mã Base64",
+        "text": "Vui lòng nhập chuỗi kiểu văn bản",
+        "base64": "Vui lòng nhập chuỗi mã hóa Base64",
+        "encode": "Mã hóa Base64",
+        "decode": "Giải mã Base64"
+    },
+    "url": {
+        "name": "Mã hóa URL",
+        "desc": "Mã hóa URL encode, giải mã decode",
+        "urlText": "Vui lòng nhập chuỗi URL",
+        "urlCode": "Vui lòng nhập mã hóa URL",
+        "encode": "Mã hóa URL",
+        "decode": "Giải mã URL"
+    },
+    "linuxCron": {
+        "name": "Tạo biểu thức Cron Linux",
+        "desc": "Phân tích, tạo biểu thức Cron trong crontab Linux",
+        "placeholder": "Vui lòng nhập biểu thức crontab",
+        "parse": "Phân tích",
+        "next7": "7 lần thực thi gần nhất",
+        "errorParse": "Lỗi phân tích biểu thức:",
+        "example": "Trong Linux, thường là lệnh 5 vị, không có giây, nhỏ nhất là phút, có định dạng như sau.",
+        "minute": "Phút<br/>Giới hạn giá trị<br/>0 - 59",
+        "hour": "Giờ<br/>Giới hạn giá trị<br/>(0 - 23)",
+        "day": "Ngày<br/>Giới hạn giá trị<br/>(1 - 31)",
+        "month": "Tháng<br/>Giới hạn giá trị<br/>(1 - 12)",
+        "week": "Tuần<br/>Giới hạn giá trị<br/>(0 - 7)"
+    },
+    "javaCron": {
+        "name": "Tạo biểu thức Cron Java",
+        "desc": "Phân tích, tạo biểu thức Cron Quartz Java",
+        "cronPlaceholder": "Vui lòng nhập biểu thức thực thi cron",
+        "parse": "Phân tích",
+        "specifyPlaceholder": "Có thể chọn nhiều",
+        "day": {
+            "dayPlaceholder": "Ngày, các ký tự đại diện cho phép là [, - *? / L W]",
+            "unspecified": "Không chỉ định",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "toDay": "ngày",
+            "averageStart": "Từ",
+            "executeEvery": "thực thi một lần mỗi",
+            "startSuffix": "ngày bắt đầu, mỗi",
+            "monthlyOn": "Mỗi tháng",
+            "lastWorkday": "ngày gần nhất là ngày làm việc",
+            "endOfMonth": "Ngày cuối cùng của tháng",
+            "specify": "Chỉ định",
+            "executeSuffix": "thực thi một lần mỗi ngày"
+        },
+        "hour": {
+            "hourPlaceholder": "Giờ, các ký tự đại diện cho phép là [, - * /]",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "toHour": "giờ",
+            "averageStart": "Từ",
+            "startSuffix": "giờ bắt đầu, mỗi",
+            "executeEveryHour": "thực thi một lần mỗi giờ",
+            "specify": "Chỉ định"
+        },
+        "min": {
+            "minutePlaceholder": "Phút, các ký tự đại diện cho phép là [, - * /]",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "toMinute": "phút",
+            "averageStart": "Từ",
+            "startSuffix": "phút bắt đầu, mỗi",
+            "executeEveryMinute": "thực thi một lần mỗi phút",
+            "specify": "Chỉ định"
+        },
+        "month": {
+            "monthPlaceholder": "Tháng, các ký tự đại diện cho phép là [, - * /]",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "toMonth": "tháng",
+            "averageStart": "Từ",
+            "startSuffix": "tháng bắt đầu, mỗi",
+            "executeEveryMonth": "thực thi một lần mỗi tháng",
+            "specify": "Chỉ định"
+        },
+        "second": {
+            "secondPlaceholder": "Giây, các ký tự đại diện cho phép là [, - * /]",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "toSecond": "giây",
+            "averageStart": "Từ",
+            "startSuffix": "giây bắt đầu, mỗi",
+            "executeEverySecond": "thực thi một lần mỗi giây",
+            "specify": "Chỉ định"
+        },
+        "week": {
+            "weekPlaceholder": "Tuần, các ký tự đại diện cho phép là [, - *? / L #]",
+            "notSpecified": "Không chỉ định",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "toWeek": "tuần",
+            "averageStart": "Tuần thứ",
+            "weekOfMonth": "của tháng",
+            "lastWeekdayOfMonth": "Ngày cuối cùng của tháng là",
+            "specify": "Chỉ định",
+            "sunday": "Chủ nhật",
+            "monday": "Thứ hai",
+            "tuesday": "Thứ ba",
+            "wednesday": "Thứ tư",
+            "thursday": "Thứ năm",
+            "friday": "Thứ sáu",
+            "saturday": "Thứ bảy"
+        },
+        "year": {
+            "noInputPlaceholder": "Không nhập, các ký tự đại diện cho phép là [, - * /]",
+            "everyYear": "Mỗi năm",
+            "cycleStart": "Chu kỳ bắt đầu từ",
+            "yearRange": "năm",
+            "fromYear": "Từ",
+            "startSuffix": " năm bắt đầu, mỗi",
+            "executeEveryYear": "thực thi một lần mỗi năm",
+            "specifyYears": "Chỉ định"
+        },
+        "index": {
+            "second": "Giây",
+            "minute": "Phút",
+            "hour": "Giờ",
+            "day": "Ngày",
+            "month": "Tháng",
+            "week": "Tuần",
+            "year": "Năm",
+            "timeExpression": "Biểu thức thời gian",
+            "corn": "Biểu thức Cron"
+        },
+        "result": {
+            "last5": "5 lần chạy gần nhất",
+            "calculating": "Đang tính toán kết quả..."
+        }
+    },
+    "camel": {
+        "name": "Chuyển chữ hoa đầu từ đếm từ đáo dấu gạch dưới",
+        "desc": "Chuyển chữ hoa đầu từ và dấu gạch dưới lẫn nhau",
+        "camelCaseToUnderline": "Công cụ chuyển chữ hoa đầu từ và dấu gạch dưới trực tuyến",
+        "camelToUnderline": "Chuyển chữ hoa đầu từ sang dấu gạch dưới",
+        "underlineToCamel": "Chuyển dấu gạch dưới sang chữ hoa đầu từ",
+        "clearValue": "Xóa giá trị",
+        "copy": "Sao chép",
+        "result": "Kết quả chuyển đổi",
+        "copySuccess": "Sao chép thành công"
+    },
+    "hibernate": {
+        "name": "Hibernate sang SQL",
+        "desc": "Chuyển log Hibernate sang SQL có thể chạy được",
+        "title": "Log Hibernate sang SQL (gán tham số)",
+        "convert": "Chuyển đổi",
+        "clearValue": "Xóa giá trị",
+        "copy": "Sao chép",
+        "result": "Kết quả chuyển đổi",
+        "copySuccess": "Sao chép thành công"
+    },
+    "textTool": "Công cụ văn bản",
+    "diff": {
+        "name": "So sánh văn bản",
+        "desc": "So sánh sự khác biệt giữa hai văn bản",
+        "selectOriginal": "Chọn tệp gốc",
+        "selectModified": "Chọn tệp mới",
+        "original": "Tệp gốc",
+        "modified": "Tệp mới",
+        "clear": "Xóa"
+    },
+    "deduplicates": {
+        "name": "Bỏ trùng văn bản",
+        "desc": "Bỏ các dòng trùng lặp trong văn bản",
+        "inputPlaceholder": "Vui lòng nhập nội dung văn bản (mỗi dòng là một mục)",
+        "originalLines": "Số dòng ban đầu",
+        "duplicateLines": "Số dòng trùng lặp",
+        "resultLines": "Số dòng cuối cùng",
+        "toDeduplicates": "Bắt đầu bỏ trùng",
+        "copy": "Sao chép",
+        "result": "Kết quả bỏ trùng",
+        "copySuccess": "Sao chép thành công",
+        "clearValue": "Xóa"
+    },
+    "text": {
+        "name": "Biên tập văn bản",
+        "desc": "Biên tập văn bản trực tuyến",
+        "language": "Ngôn ngữ"
+    },
+    "qrcode": {
+        "name": "Tạo mã QR",
+        "desc": "Tạo mã QR từ văn bản hoặc URL",
+        "inputLabel": "Nội dung",
+        "placeholder": "Nhập văn bản hoặc URL để tạo mã QR",
+        "previewTitle": "Xem trước",
+        "size": "Kích thước",
+        "historyTitle": "Lịch sử",
+        "emptyHistory": "Chưa có lịch sử",
+        "emptyText": "(trống)",
+        "emptyInput": "Vui lòng nhập nội dung",
+        "justNow": "vừa xong",
+        "minutesAgo": "phút trước",
+        "hoursAgo": "giờ trước",
+        "daysAgo": "ngày trước",
+        "generate": "Tạo mã QR",
+        "download": "Tải xuống",
+        "clearValue": "Xóa",
+        "clearAll": "Xóa tất cả",
+        "storageError": "Lỗi ghi vào bộ nhớ cục bộ",
+        "generateError": "Lỗi tạo mã QR"
+    },
+    "nav": {
+        "home": "1024 URL",
+    "search": "Tìm kiếm công cụ",
+        "jsonFormat": "Định dạng và kiểm tra JSON",
+        "xmlFormat": "Định dạng và kiểm tra XML",
+        "sqlFormat": "Định dạng SQL",
+        "base64": "Giải mã/Mã hóa BASE64 trực tuyến",
+        "urlEncode": "Giải mã/Mã hóa URL trực tuyến",
+        "linuxCron": "Phân tích biểu thức Cron Linux",
+        "javaCron": "Tạo biểu thức Cron Quartz Java",
+        "textDiff": "So sánh sự khác biệt văn bản trực tuyến",
+        "textDedup": "Bỏ trùng văn bản trực tuyến",
+        "textEditor": "Biên tập văn bản trực tuyến",
+        "camelCase": "Chuyển chữ hoa đầu từ đếm từ đáo dấu gạch dưới",
+        "hibernateToSql": "Log Hibernate sang SQL",
+        "qrcode": "Tạo mã QR"
+    }
+}

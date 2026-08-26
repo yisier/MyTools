@@ -1,0 +1,113 @@
+version: '3'
+
+tasks:
+  go:mod:tidy:
+    summary: Runs `go mod tidy`
+    internal: true
+    run: once
+    cmds:
+      - go mod tidy
+
+  install:frontend:deps:
+    summary: Install frontend dependencies
+    run: once
+    cmds:
+      - task: install:frontend:deps:{{.PACKAGE_MANAGER}}
+
+  install:frontend:deps:yarn:
+    sources:
+      - package.json
+      - yarn.lock
+    status:
+      - test -d node_modules || test -f .pnp.cjs
+    preconditions:
+      - sh: yarn --version
+        msg: "yarn not found"
+    cmds:
+      - yarn install
+
+  install:frontend:deps:npm:
+    sources:
+      - package.json
+      - package-lock.json
+    generates:
+      - node_modules
+    preconditions:
+      - sh: npm version
+        msg: "Looks like npm isn't installed. Npm is part of the Node installer: https://nodejs.org/en/download/"
+    cmds:
+      - npm install
+
+  build:frontend:
+    label: build:frontend (DEV={{.DEV}} RUNNER={{.PACKAGE_MANAGER}})
+    summary: Build the frontend project
+    run: once
+    sources:
+      - "**/*"
+      - exclude: node_modules/**/*
+      - exclude: dist/**/*
+      - exclude: bin/**/*
+      - exclude: .task/**/*
+      - exclude: .git/**/*
+    generates:
+      - dist/**/*
+    deps:
+      - task: install:frontend:deps
+    cmds:
+      - task: frontend:run
+        vars:
+          SCRIPT: '{{if eq .DEV "true"}}build:dev{{else}}build{{end}}'
+    env:
+      PRODUCTION: '{{if eq .DEV "true"}}false{{else}}true{{end}}'
+
+  frontend:run:
+    summary: Run a frontend script with selected runner
+    cmds:
+      - task: frontend:run:{{.PACKAGE_MANAGER}}
+        vars:
+          SCRIPT: "{{.SCRIPT}}"
+    vars:
+      SCRIPT: "{{.SCRIPT}}"
+
+  frontend:run:yarn:
+    cmds:
+      - yarn {{.SCRIPT}}
+    vars:
+      SCRIPT: "{{.SCRIPT}}"
+
+  frontend:run:npm:
+    cmds:
+      - npm run {{.SCRIPT}}
+    vars:
+      SCRIPT: "{{.SCRIPT}}"
+
+  generate:icons:
+    summary: Generates Windows `.ico` icon from an image
+    run: once
+    sources:
+      - "build/appicon.png"
+    generates:
+      - "build/windows/icon.ico"
+    cmds:
+      - wails3 generate icons -input build/appicon.png -windowsfilename build/windows/icon.ico -macfilename build/darwin/icon.icns
+
+  dev:frontend:
+    summary: Runs the frontend in development mode
+    deps:
+      - task: install:frontend:deps
+    cmds:
+      - task: frontend:dev:{{.PACKAGE_MANAGER}}
+
+  frontend:dev:yarn:
+    cmds:
+      - yarn dev --port {{.VITE_PORT}} --strictPort
+
+  frontend:dev:npm:
+    cmds:
+      - npm run dev -- --port {{.VITE_PORT}} --strictPort
+
+  update:build-assets:
+    summary: Updates the build assets
+    dir: build
+    cmds:
+      - wails3 update build-assets -name "{{.APP_NAME}}" -binaryname "{{.APP_NAME}}" -config config.yml -dir .

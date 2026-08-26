@@ -1,0 +1,41 @@
+{
+  "name": "tools",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "yarn@1.22.22",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --minify false --mode development",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "ace-builds": "^1.15.2",
+    "cron-parser": "^4.8.1",
+    "element-plus": "^2.2.36",
+    "js-beautify": "^1.14.7",
+    "js-cookie": "^3.0.5",
+    "monaco-editor": "^0.44.0",
+    "prismjs": "^1.29.0",
+    "qrcode": "^1.5.4",
+    "sql-formatter": "^12.2.0",
+    "vue": "^3.2.45",
+    "vue-i18n": "^11.1.0",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "babel-plugin-prismjs": "^2.1.0",
+    "monaco-editor": "^0.44.0",
+    "monaco-editor-webpack-plugin": "^7.1.0",
+    "sass": "^1.58.3",
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-icons": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.1.2",
+    "vite-plugin-prismjs": "^0.0.8"
+  }
+}
