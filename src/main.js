@@ -145,7 +145,7 @@ const routes = [
             {
                 path: 'camelCaseToUnderline',
                 name: 'camelCaseToUnderline',
-                component: () => import('@/pages/format/camelCaseToUnderline.vue'),
+                component: () => import('@/pages/format/CamelCaseToUnderline.vue'),
                 meta: {
                     title: 'nav.camelCase'
                 }
