@@ -3,6 +3,12 @@
     "home": "Inicio",
   "search": "Buscar herramientas",
     "homeSubtitle": "Un conjunto limpio de utilidades online para desarrolladores y texto",
+    "theme": {
+        "label": "Tema",
+        "light": "Claro",
+        "dark": "Oscuro",
+        "auto": "Sistema"
+    },
     "json": {
         "name": "Herramienta JSON",
         "desc": "Formateo, validación y compresión de JSON",

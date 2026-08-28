@@ -21,7 +21,7 @@
                     <div class="success-msg" v-if="checkResut">
                         <el-row align="middle">
                             <el-col :md="1" :offset="1">
-                                <el-icon size="40" color="#329d38">
+                                <el-icon size="40">
                                     <SuccessFilled />
                                 </el-icon>
                             </el-col>
@@ -33,7 +33,7 @@
                     <div class="error-msg" v-if="checkResut != null && !checkResut && errorMsg != ''">
                         <el-row align="middle">
                             <el-col :md="1" :offset="1">
-                                <el-icon size="40" color="#e75033">
+                                <el-icon size="40">
                                     <CircleCloseFilled />
                                 </el-icon>
                             </el-col>
@@ -87,6 +87,11 @@ import ace from 'ace-builds'
 import themeEclipseUrl from 'ace-builds/src-min-noconflict/theme-eclipse?url';
 ace.config.setModuleUrl('ace/theme/eclipse', themeEclipseUrl);
 
+import themeOneDarkUrl from 'ace-builds/src-min-noconflict/theme-one_dark?url';
+ace.config.setModuleUrl('ace/theme/one_dark', themeOneDarkUrl);
+
+import { isDark, onThemeChange } from '@/theme'
+
 import 'ace-builds/src-min-noconflict/ext-language_tools';
 ace.require("ace/ext/language_tools");
 
@@ -107,7 +112,7 @@ export default {
                 maxLines: 10, // 最大行数，超过会自动出现滚动条
                 minLines: 10, // 最小行数，还未到最大行数时，编辑器会自动伸缩大小
                 fontSize: 14, // 编辑器内字体大小
-                theme: 'ace/theme/eclipse', // 默认设置的主题
+                theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse', // 默认设置的主题
                 mode: 'ace/mode/text', // 默认设置的语言模式
                 tabSize: 4,// 制表符设置为 4 个空格大小
                 readOnly: true,//只读
@@ -125,7 +130,7 @@ export default {
             maxLines: 18, // 最大行数，超过会自动出现滚动条
             minLines: 18, // 最小行数，还未到最大行数时，编辑器会自动伸缩大小
             fontSize: 14, // 编辑器内字体大小
-            theme: 'ace/theme/eclipse', // 默认设置的主题
+            theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse', // 默认设置的主题
             mode: 'ace/mode/text', // 默认设置的语言模式
             tabSize: 4,// 制表符设置为 4 个空格大小
             readOnly: false,//只读
@@ -139,6 +144,14 @@ export default {
 
         this.editor2 = ace.edit(this.$refs.ace2, this.editor2Option);
 
+        // 系统主题切换时同步编辑器主题
+        this.offThemeChange = onThemeChange((dark) => {
+            const theme = dark ? 'ace/theme/one_dark' : 'ace/theme/eclipse'
+            this.editor2Option.theme = theme
+            this.editor && this.editor.setTheme(theme)
+            this.editor2 && this.editor2.setTheme(theme)
+        })
+
         const camelCase = localStorage.getItem('camelCase')
         if (camelCase) {
             this.editor.setValue(camelCase, -1)
@@ -147,6 +160,11 @@ export default {
 
         this.camelToUnderline()
 
+    },
+    beforeUnmount() {
+        this.offThemeChange && this.offThemeChange()
+        this.editor && this.editor.destroy()
+        this.editor2 && this.editor2.destroy()
     },
     methods: {
 
@@ -241,16 +259,16 @@ export default {
 
 
 .success-msg {
-    color: #329d38;
-    background-color: #ddf4df;
+    color: var(--el-color-success);
+    background-color: var(--el-color-success-light-9);
     font-size: 12px;
     padding: 10px;
 }
 
 
 .error-msg {
-    color: #e75033;
-    background-color: #ffe5e0;
+    color: var(--el-color-danger);
+    background-color: var(--el-color-danger-light-9);
     font-size: 12px;
     padding: 10px;
 }

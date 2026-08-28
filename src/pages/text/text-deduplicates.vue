@@ -50,6 +50,11 @@ ace.config.setModuleUrl('ace/mode/xml', modeXmlUrl);
 import themeEclipseUrl from 'ace-builds/src-min-noconflict/theme-eclipse?url';
 ace.config.setModuleUrl('ace/theme/eclipse', themeEclipseUrl);
 
+import themeOneDarkUrl from 'ace-builds/src-min-noconflict/theme-one_dark?url';
+ace.config.setModuleUrl('ace/theme/one_dark', themeOneDarkUrl);
+
+import { isDark, onThemeChange } from '@/theme'
+
 import 'ace-builds/src-min-noconflict/ext-language_tools';
 ace.require("ace/ext/language_tools");
 
@@ -69,7 +74,7 @@ export default {
         this.editor1 = ace.edit(this.$refs.ace1, {
             useWorker: true,
             fontSize: 14, // 编辑器内字体大小
-            theme: 'ace/theme/eclipse', // 默认设置的主题
+            theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse', // 默认设置的主题
             mode: 'ace/mode/text', // 默认设置的语言模式
             tabSize: 4,// 制表符设置为 4 个空格大小
             readOnly: false,//只读
@@ -82,7 +87,7 @@ export default {
         this.editor2 = ace.edit(this.$refs.ace2, {
             useWorker: true,
             fontSize: 14, // 编辑器内字体大小
-            theme: 'ace/theme/eclipse', // 默认设置的主题
+            theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse', // 默认设置的主题
             mode: 'ace/mode/text', // 默认设置的语言模式
             tabSize: 4,// 制表符设置为 4 个空格大小
             readOnly: true,//只读
@@ -91,6 +96,13 @@ export default {
             wrap: 'off',  //  换行
             highlightSelectedWord: false, // 高亮选中文本
         });
+
+        // 系统主题切换时同步编辑器主题
+        this.offThemeChange = onThemeChange((dark) => {
+            const theme = dark ? 'ace/theme/one_dark' : 'ace/theme/eclipse'
+            this.editor1 && this.editor1.setTheme(theme)
+            this.editor2 && this.editor2.setTheme(theme)
+        })
 
         // 容器尺寸变化时自适应
         this.resizeObserver = new ResizeObserver(() => {
@@ -107,6 +119,7 @@ export default {
         }
     },
     beforeUnmount() {
+        this.offThemeChange && this.offThemeChange()
         this.resizeObserver && this.resizeObserver.disconnect()
         this.editor1 && this.editor1.destroy()
         this.editor2 && this.editor2.destroy()
@@ -210,7 +223,7 @@ export default {
 .text-deduplicates .stats-card .item {
     padding: 10px 12px;
     font-size: 13px;
-    color: #606266;
+    color: var(--el-text-color-regular);
     white-space: nowrap;
 }
 
@@ -220,10 +233,10 @@ export default {
 }
 
 .text-deduplicates .num-green {
-    color: #3bb76d;
+    color: var(--el-color-success);
 }
 
 .text-deduplicates .num-red {
-    color: #e6162d;
+    color: var(--el-color-danger);
 }
 </style>

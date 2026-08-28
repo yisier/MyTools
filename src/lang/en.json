@@ -3,6 +3,12 @@
   "home": "Home",
   "search": "Search tools",
   "homeSubtitle": "A clean set of online developer & text utilities",
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "System"
+  },
   "json": {
     "name": "JSON Tools",
     "desc": "JSON Formatting, Validation, Compression",

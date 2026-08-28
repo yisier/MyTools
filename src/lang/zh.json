@@ -3,6 +3,12 @@
     "home": "首页",
     "search": "搜索工具",
     "homeSubtitle": "简洁高效的在线开发者与文本工具集",
+    "theme": {
+        "label": "主题",
+        "light": "浅色",
+        "dark": "深色",
+        "auto": "跟随系统"
+    },
     "json": {
         "name": "JSON 工具",
         "desc": "JSON格式化、校验、压缩",

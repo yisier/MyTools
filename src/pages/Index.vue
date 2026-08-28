@@ -91,7 +91,7 @@ const sections = [
 
 .home-subtitle {
   font-size: 14px;
-  color: #909399;
+  color: var(--el-text-color-secondary);
   margin: 0;
 }
 
@@ -102,7 +102,7 @@ const sections = [
 .section-title {
   font-size: 13px;
   font-weight: 600;
-  color: #606266;
+  color: var(--el-text-color-regular);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0 0 12px 4px;
@@ -119,16 +119,16 @@ const sections = [
   align-items: center;
   gap: 14px;
   padding: 18px 18px;
-  background: #fff;
-  border: 1px solid #ebeef5;
+  background: var(--el-bg-color);
+  border: 1px solid var(--el-border-color-lighter);
   border-radius: 10px;
-  color: #303133;
+  color: var(--el-text-color-primary);
   text-decoration: none;
   transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 
 .tool-card:hover {
-  border-color: #c6e2ff;
+  border-color: var(--el-color-primary-light-7);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(64, 158, 255, 0.1);
 }
@@ -145,8 +145,8 @@ const sections = [
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: #ecf5ff;
-  color: #409eff;
+  background: var(--el-color-primary-light-9);
+  color: var(--el-color-primary);
 }
 
 .tool-text {
@@ -157,7 +157,7 @@ const sections = [
 .tool-name {
   font-size: 14px;
   font-weight: 600;
-  color: #303133;
+  color: var(--el-text-color-primary);
   line-height: 1.4;
   white-space: nowrap;
   overflow: hidden;
@@ -167,7 +167,7 @@ const sections = [
 .tool-desc {
   margin-top: 3px;
   font-size: 12px;
-  color: #909399;
+  color: var(--el-text-color-secondary);
   line-height: 1.4;
   white-space: nowrap;
   overflow: hidden;

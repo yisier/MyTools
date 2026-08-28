@@ -3,6 +3,12 @@
     "home": "Trang chủ",
     "search": "Tìm kiếm công cụ",
     "homeSubtitle": "Bộ công cụ văn bản & dành cho lập trình viên gọn gàng, hiệu quả",
+    "theme": {
+        "label": "Giao diện",
+        "light": "Sáng",
+        "dark": "Tối",
+        "auto": "Theo hệ thống"
+    },
     "json": {
         "name": "Công cụ JSON",
         "desc": "Định dạng, kiểm tra, nén JSON",

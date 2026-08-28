@@ -21,7 +21,7 @@
                     <div class="error-msg" v-if="errorMsg != ''">
                         <el-row align="middle">
                             <el-col :md="1" :offset="1">
-                                <el-icon size="40" color="#e75033">
+                                <el-icon size="40">
                                     <CircleCloseFilled />
                                 </el-icon>
                             </el-col>
@@ -71,6 +71,11 @@ ace.config.setModuleUrl('ace/mode/sql', modeSqlUrl);
 import themeEclipseUrl from 'ace-builds/src-min-noconflict/theme-eclipse?url';
 ace.config.setModuleUrl('ace/theme/eclipse', themeEclipseUrl);
 
+import themeOneDarkUrl from 'ace-builds/src-min-noconflict/theme-one_dark?url';
+ace.config.setModuleUrl('ace/theme/one_dark', themeOneDarkUrl);
+
+import { isDark, onThemeChange } from '@/theme'
+
 import 'ace-builds/src-min-noconflict/ext-language_tools';
 ace.require("ace/ext/language_tools");
 
@@ -100,7 +105,7 @@ export default {
                 maxLines: 18,
                 minLines: 10,
                 fontSize: 14,
-                theme: 'ace/theme/eclipse',
+                theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse',
                 mode: 'ace/mode/sql',
                 tabSize: 4,
                 readOnly: true,
@@ -117,7 +122,7 @@ export default {
             maxLines: 22,
             minLines: 18,
             fontSize: 14,
-            theme: 'ace/theme/eclipse',
+            theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse',
             mode: 'ace/mode/sql',
             tabSize: 4,
             readOnly: false,
@@ -130,12 +135,25 @@ export default {
 
         this.editor2 = ace.edit(this.$refs.ace2, this.editor2Option);
 
+        // 系统主题切换时同步编辑器主题
+        this.offThemeChange = onThemeChange((dark) => {
+            const theme = dark ? 'ace/theme/one_dark' : 'ace/theme/eclipse'
+            this.editor2Option.theme = theme
+            this.editor && this.editor.setTheme(theme)
+            this.editor2 && this.editor2.setTheme(theme)
+        })
+
         const cached = localStorage.getItem('hibernateToSql')
         if (cached) {
             this.editor.setValue(cached, -1)
         }
 
         this.convert()
+    },
+    beforeUnmount() {
+        this.offThemeChange && this.offThemeChange()
+        this.editor && this.editor.destroy()
+        this.editor2 && this.editor2.destroy()
     },
     methods: {
         camelToSnake(s) {
@@ -288,8 +306,8 @@ export default {
 }
 
 .error-msg {
-    color: #e75033;
-    background-color: #ffe5e0;
+    color: var(--el-color-danger);
+    background-color: var(--el-color-danger-light-9);
     font-size: 12px;
     padding: 10px;
 }

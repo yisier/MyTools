@@ -1,10 +1,5 @@
 <template>
     <aside class="sidebar">
-        <div class="sidebar-brand" @click="goHome" :title="$t('home')">
-            <el-icon :size="20" color="#409eff"><Setting /></el-icon>
-            <span class="brand-name">MyTools</span>
-        </div>
-
         <nav class="sidebar-nav">
             <div v-for="group in groups" :key="group.key" class="nav-group">
                 <div class="nav-group-title">{{ $t(group.titleKey) }}</div>
@@ -22,6 +17,35 @@
         </nav>
 
         <div class="sidebar-footer">
+            <el-dropdown trigger="click" popper-class="theme-dropdown" @command="changeTheme">
+                <button class="lang-btn">
+                    <el-icon :size="14">
+                        <Sunny v-if="themeMode === 'light'" />
+                        <Moon v-else-if="themeMode === 'dark'" />
+                        <Monitor v-else />
+                    </el-icon>
+                    <span>{{ themeLabel }}</span>
+                    <el-icon :size="12" class="caret"><ArrowDown /></el-icon>
+                </button>
+                <template #dropdown>
+                    <el-dropdown-menu>
+                        <el-dropdown-item
+                            v-for="item in themeOptions"
+                            :key="item.value"
+                            :command="item.value"
+                            :class="{ 'is-current': item.value === themeMode }"
+                        >
+                            <el-icon :size="14" class="theme-item-icon">
+                                <Sunny v-if="item.value === 'light'" />
+                                <Moon v-else-if="item.value === 'dark'" />
+                                <Monitor v-else />
+                            </el-icon>
+                            {{ item.label }}
+                        </el-dropdown-item>
+                    </el-dropdown-menu>
+                </template>
+            </el-dropdown>
+
             <el-dropdown trigger="click" popper-class="lang-dropdown" @command="changeLocale">
                 <button class="lang-btn">
                     <el-icon :size="14"><Sort /></el-icon>
@@ -46,7 +70,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import {
@@ -66,8 +90,12 @@ import {
     Grid,
     DocumentChecked,
     Filter,
-    EditPen
+    EditPen,
+    Sunny,
+    Moon,
+    Monitor
 } from '@element-plus/icons-vue'
+import { getThemeMode, setThemeMode, THEME_MODES } from '@/theme'
 
 const route = useRoute()
 const router = useRouter()
@@ -137,7 +165,25 @@ function changeLocale(v) {
     localStorage.setItem('language', v)
     const newPath = route.path.replace(/^\/[^/]*/, '/' + v)
     router.push(newPath)
-    i18n.global.locale.value = v
+    i18n.locale.value = v
+}
+
+const themeMode = ref(getThemeMode())
+
+const themeOptions = computed(() =>
+    THEME_MODES.map((value) => ({
+        value,
+        label: i18n.t('theme.' + value)
+    }))
+)
+
+const themeLabel = computed(() =>
+    i18n.t('theme.' + themeMode.value)
+)
+
+function changeTheme(v) {
+    themeMode.value = v
+    setThemeMode(v)
 }
 </script>
 
@@ -148,8 +194,8 @@ function changeLocale(v) {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border-right: 1px solid #e4e7ed;
+    background: var(--el-bg-color);
+    border-right: 1px solid var(--el-border-color-light);
 }
 
 .sidebar-brand {
@@ -164,7 +210,7 @@ function changeLocale(v) {
 .brand-name {
     font-size: 15px;
     font-weight: 700;
-    color: #303133;
+    color: var(--el-text-color-primary);
     letter-spacing: 0.3px;
 }
 
@@ -179,7 +225,7 @@ function changeLocale(v) {
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb {
-    background: #dcdfe6;
+    background: var(--el-border-color);
     border-radius: 3px;
 }
 
@@ -190,7 +236,7 @@ function changeLocale(v) {
 .nav-group-title {
     font-size: 11px;
     font-weight: 600;
-    color: #909399;
+    color: var(--el-text-color-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding: 0 10px;
@@ -204,19 +250,19 @@ function changeLocale(v) {
     padding: 8px 10px;
     margin-bottom: 2px;
     border-radius: 6px;
-    color: #303133;
+    color: var(--el-text-color-primary);
     font-size: 13.5px;
     text-decoration: none;
     transition: background-color 0.12s, color 0.12s;
 }
 
 .nav-item:hover {
-    background: #f5f7fa;
+    background: var(--el-fill-color-light);
 }
 
 .nav-item.active {
-    background: #ecf5ff;
-    color: #409eff;
+    background: var(--el-color-primary-light-9);
+    color: var(--el-color-primary);
     font-weight: 600;
 }
 
@@ -227,8 +273,11 @@ function changeLocale(v) {
 }
 
 .sidebar-footer {
-    border-top: 1px solid #f0f2f5;
+    border-top: 1px solid var(--el-border-color-lighter);
     padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .lang-btn {
@@ -240,18 +289,22 @@ function changeLocale(v) {
     border: none;
     border-radius: 6px;
     background: transparent;
-    color: #606266;
+    color: var(--el-text-color-regular);
     font-size: 13px;
     cursor: pointer;
     transition: background-color 0.12s;
 }
 
 .lang-btn:hover {
-    background: #f5f7fa;
+    background: var(--el-fill-color-light);
 }
 
 .lang-btn .caret {
     margin-left: auto;
-    color: #c0c4cc;
+    color: var(--el-text-color-placeholder);
+}
+
+.theme-item-icon {
+    margin-right: 6px;
 }
 </style>

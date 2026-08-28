@@ -266,7 +266,7 @@ onMounted(() => {
 
 .panel {
   margin-bottom: 16px;
-  border: 1px solid #ebeef5;
+  border: 1px solid var(--el-border-color-lighter);
 }
 
 .panel-header {
@@ -281,7 +281,7 @@ onMounted(() => {
   gap: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: #303133;
+  color: var(--el-text-color-primary);
 }
 
 .panel-title .el-icon {
@@ -294,7 +294,7 @@ onMounted(() => {
   gap: 12px;
   margin-top: 14px;
   font-size: 13px;
-  color: #606266;
+  color: var(--el-text-color-regular);
 }
 
 .option-label {
@@ -311,13 +311,13 @@ onMounted(() => {
   margin-left: 6px;
   font-size: 12px;
   font-weight: normal;
-  color: #909399;
+  color: var(--el-text-color-secondary);
 }
 
 .empty-tip {
   padding: 32px 0;
   text-align: center;
-  color: #c0c4cc;
+  color: var(--el-text-color-placeholder);
   font-size: 13px;
 }
 
@@ -340,7 +340,7 @@ onMounted(() => {
 }
 
 .history-item:hover {
-  background: #f5f7fa;
+  background: var(--el-fill-color-light);
 }
 
 .history-thumb {
@@ -360,7 +360,7 @@ onMounted(() => {
 
 .history-text {
   font-size: 13px;
-  color: #303133;
+  color: var(--el-text-color-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -369,16 +369,16 @@ onMounted(() => {
 .history-time {
   margin-top: 2px;
   font-size: 11px;
-  color: #909399;
+  color: var(--el-text-color-secondary);
 }
 
 .history-delete {
   flex-shrink: 0;
-  color: #c0c4cc;
+  color: var(--el-text-color-placeholder);
 }
 
 .history-delete:hover {
-  color: #f56c6c;
+  color: var(--el-color-danger);
 }
 
 .preview-wrapper {
@@ -387,7 +387,7 @@ onMounted(() => {
   align-items: center;
   min-height: 320px;
   padding: 16px;
-  background: #fafbfc;
+  background: var(--el-fill-color-lighter);
   border-radius: 6px;
 }
 
@@ -413,11 +413,11 @@ onMounted(() => {
   width: 100%;
   max-width: 100%;
   padding: 8px 12px;
-  background: #f5f7fa;
+  background: var(--el-fill-color-light);
   border-radius: 4px;
   font-size: 13px;
   line-height: 1.5;
-  color: #303133;
+  color: var(--el-text-color-primary);
   text-align: center;
   word-break: break-all;
   white-space: pre-wrap;
@@ -426,7 +426,7 @@ onMounted(() => {
 
 .qr-placeholder {
   text-align: center;
-  color: #c0c4cc;
+  color: var(--el-text-color-placeholder);
 }
 
 .qr-placeholder p {

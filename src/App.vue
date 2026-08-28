@@ -17,7 +17,7 @@ body,
 
 body {
   margin: 0;
-  background-color: #f5f7fa;
+  background-color: var(--el-bg-color-page);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Roboto,
     'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

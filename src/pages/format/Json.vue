@@ -12,14 +12,14 @@
     <div ref="ace" class="ace-editor-full" />
 
     <div class="success-msg" v-if="checkResut">
-      <el-icon size="18" color="#329d38">
+      <el-icon size="18">
         <SuccessFilled />
       </el-icon>
       <span>{{ $t('json.correct') }}</span>
     </div>
 
     <div class="error-msg" v-if="checkResut != null && !checkResut && errorMsg != ''">
-      <el-icon size="18" color="#e75033">
+      <el-icon size="18">
         <CircleCloseFilled />
       </el-icon>
       <span v-html="errorMsg"></span>
@@ -44,6 +44,11 @@ ace.config.setModuleUrl('ace/mode/json', modeJsonUrl);
 
 import themeEclipseUrl from 'ace-builds/src-min-noconflict/theme-eclipse?url';
 ace.config.setModuleUrl('ace/theme/eclipse', themeEclipseUrl);
+
+import themeOneDarkUrl from 'ace-builds/src-min-noconflict/theme-one_dark?url';
+ace.config.setModuleUrl('ace/theme/one_dark', themeOneDarkUrl);
+
+import { isDark, onThemeChange } from '@/theme'
 
 import workerJsonUrl from 'ace-builds/src-min-noconflict/worker-json?url';
 ace.config.setModuleUrl('ace/mode/json_worker', workerJsonUrl);
@@ -74,7 +79,7 @@ export default {
     this.editor = ace.edit(this.$refs.ace, {
       useWorker: true,
       fontSize: 14, // 编辑器内字体大小
-      theme: 'ace/theme/eclipse', // 默认设置的主题
+      theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse', // 默认设置的主题
       mode: 'ace/mode/json', // 默认设置的语言模式
       tabSize: 4,// 制表符设置为 4 个空格大小
       readOnly: false,//只读
@@ -82,6 +87,11 @@ export default {
       showPrintMargin: false,
       wrap: 'free',  //  换行
     });
+
+    // 系统主题切换时同步编辑器主题
+    this.offThemeChange = onThemeChange((dark) => {
+      this.editor && this.editor.setTheme(dark ? 'ace/theme/one_dark' : 'ace/theme/eclipse')
+    })
 
     // 容器尺寸变化时自适应
     this.resizeObserver = new ResizeObserver(() => {
@@ -97,6 +107,7 @@ export default {
 
   },
   beforeUnmount() {
+    this.offThemeChange && this.offThemeChange()
     this.resizeObserver && this.resizeObserver.disconnect()
     this.editor && this.editor.destroy()
   },
@@ -180,7 +191,7 @@ export default {
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #606266;
+  color: var(--el-text-color-regular);
 }
 
 .ace-editor-full {
@@ -201,8 +212,8 @@ export default {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #329d38;
-  background-color: #ddf4df;
+  color: var(--el-color-success);
+  background-color: var(--el-color-success-light-9);
   font-size: 12px;
   padding: 8px 12px;
   margin-top: 10px;
@@ -214,8 +225,8 @@ export default {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  color: #e75033;
-  background-color: #ffe5e0;
+  color: var(--el-color-danger);
+  background-color: var(--el-color-danger-light-9);
   font-size: 12px;
   padding: 8px 12px;
   margin-top: 10px;

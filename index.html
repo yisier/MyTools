@@ -7,6 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1024 URL</title>
 
+  <!-- 恢复主题模式（浅色/深色/跟随系统），提前挂载 dark 类避免闪白 -->
+  <script>
+    (function () {
+      var mode = localStorage.getItem('theme');
+      if (mode !== 'light' && mode !== 'dark' && mode !== 'auto') mode = 'auto';
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = 'dark';
+      }
+    })();
+  </script>
+
   <script>
     var _hmt = _hmt || [];
     (function () {

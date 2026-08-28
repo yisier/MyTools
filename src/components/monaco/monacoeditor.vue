@@ -3,6 +3,7 @@
 </template>
 <script>
 import * as monaco from 'monaco-editor'
+import { isDark, onThemeChange } from '@/theme'
 export default {
   name: 'AcMonaco',
   props: {
@@ -29,7 +30,6 @@ export default {
       // 主要配置
       defaultOpts: {
         value: '', // 编辑器的值
-        theme: 'vs', // 编辑器主题：vs, hc-black, or vs-dark，更多选择详见官网
       },
       // 编辑器对象
       monacoEditor: {}
@@ -45,11 +45,20 @@ export default {
   },
   mounted() {
     this.init()
+    // 系统主题切换时同步编辑器主题
+    this.offThemeChange = onThemeChange((dark) => {
+      monaco.editor.setTheme(dark ? 'vs-dark' : 'vs')
+    })
+  },
+  beforeUnmount() {
+    this.offThemeChange && this.offThemeChange()
   },
   methods: {
     init() {
       // 生成编辑器配置
-      let editorOptions = Object.assign(this.defaultOpts, this.opts)
+      let editorOptions = Object.assign({}, this.defaultOpts, this.opts)
+      // 编辑器主题跟随系统暗黑模式
+      editorOptions.theme = isDark() ? 'vs-dark' : 'vs'
       // editorOptions.readonly = false;
       // editorOptions.language = 'javascript'
       // 初始化编辑器实例

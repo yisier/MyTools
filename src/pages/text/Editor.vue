@@ -18,6 +18,8 @@ import ace from 'ace-builds'
 
 // ace主题包
 import 'ace-builds/src-min-noconflict/theme-eclipse'
+import 'ace-builds/src-min-noconflict/theme-one_dark'
+import { isDark, onThemeChange } from '@/theme'
 // ace 检索框
 import 'ace-builds/src-min-noconflict/ext-searchbox'
 // ace语言包
@@ -74,7 +76,7 @@ export default {
     this.editor = ace.edit(this.$refs.ace, {
       useWorker: true,
       fontSize: 14, // 编辑器内字体大小
-      theme: 'ace/theme/eclipse', // 默认设置的主题
+      theme: isDark() ? 'ace/theme/one_dark' : 'ace/theme/eclipse', // 默认设置的主题
       mode: 'ace/mode/text', // 默认设置的语言模式
       tabSize: 4,// 制表符设置为 4 个空格大小
       readOnly: false,//只读
@@ -82,6 +84,11 @@ export default {
       showPrintMargin: false,
       wrap: 'free',  //  换行
     });
+
+    // 系统主题切换时同步编辑器主题
+    this.offThemeChange = onThemeChange((dark) => {
+      this.editor && this.editor.setTheme(dark ? 'ace/theme/one_dark' : 'ace/theme/eclipse')
+    })
 
     // 容器尺寸变化时自适应
     this.resizeObserver = new ResizeObserver(() => {
@@ -95,6 +102,7 @@ export default {
     }
   },
   beforeUnmount() {
+    this.offThemeChange && this.offThemeChange()
     this.resizeObserver && this.resizeObserver.disconnect()
     this.editor && this.editor.destroy()
   },

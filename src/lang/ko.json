@@ -3,6 +3,12 @@
     "home": "홈",
     "search": "도구 검색",
     "homeSubtitle": "깔끔한 온라인 개발자 & 텍스트 도구 모음",
+    "theme": {
+        "label": "테마",
+        "light": "라이트",
+        "dark": "다크",
+        "auto": "시스템 설정"
+    },
     "json": {
         "name": "JSON 도구",
         "desc": "JSON 형식 지정, 검증, 압축",

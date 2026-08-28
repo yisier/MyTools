@@ -29,6 +29,6 @@ export default {
   flex: 1;
   min-width: 0;
   overflow-y: auto;
-  background: #f5f7fa;
+  background: var(--el-bg-color-page);
 }
 </style>
